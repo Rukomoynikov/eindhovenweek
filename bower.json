@@ -1,0 +1,16 @@
+{
+  "name": "experiment",
+  "version": "0.0.0",
+  "authors": [
+    "Maksim Rukomoynikov <rukomoynikov@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "normalize-css": "*"
+  }
+}

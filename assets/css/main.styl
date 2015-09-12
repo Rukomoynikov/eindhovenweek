@@ -1,0 +1,111 @@
+*, *:after, *:before
+	box-sizing: border-box
+
+html, body
+	margin 0px
+	font-size 16px
+	height 100%
+	font-family 'ralewaylight'
+
+.bold, .choosed
+	font-family "ralewaybold"
+
+a
+	color #383838
+
+li
+	margin-bottom 5px
+
+.choosed
+	background yellow
+
+.author
+	font-style italic
+
+blockquote
+	position relative
+
+.yellow-back
+	background yellow
+	font-size 120%
+
+.line
+	margin-bottom 40px
+
+	img
+		vertical-align top
+		display inline-block
+		border-radius 50%
+		width 120px
+		height 120px
+
+	img + p
+		vertical-align top
+		display: inline-block
+		width: calc(100% - 170px)
+		padding 0px
+		margin 0px
+
+.agenda__day
+	margin-top 40px
+	font-family "ralewaybold"
+
+.header
+	height 100%
+
+	&__container
+		background url('../images/dutch-design-week-2015-07.jpg')
+		background-size cover
+		max-width 1920px
+		width 100%
+		height 100%
+		color white
+		font-family 'ralewaylight'
+		margin 0px auto
+		padding 10vw
+
+	&__slogan
+		font-size: 10vh;
+		@media screen and (orientation: portrait)
+			font-size: 10vw;
+		margin: 0px;
+		background: yellow;
+		display: inline-block;
+		padding: 10px;
+		color: black;
+
+		&--sub
+			font-size: 5vh;
+			@media screen and (orientation: portrait)
+				font-size: 5vw;
+			color: black;
+			background: white;
+			display: inline-block;
+			padding: 5px;
+			margin-bottom 0px
+
+		&--author
+			font-size: 3vh;
+			@media screen and (orientation: portrait)
+				font-size: 3vw;
+			background white
+			color black
+			display inline-block
+			padding 5px
+
+.section
+	max-width 1024px
+	margin 0px auto
+	padding 0px 10px
+
+
+	&__title
+		font-family: "ralewaymedium";
+		letter-spacing: 1px;
+
+	&__col
+		width 33%
+		display inline-block
+		padding 20px
+		vertical-align top
+

@@ -1,0 +1,11 @@
+{
+  "name": "simpleSiteGenerator",
+  "version": "0.0.1",
+  "dependencies": {
+  	"gulp" : "*",
+  	"gulp-jade" : "*",
+  	"gulp-stylus" : "*",
+  	"gulp-autoprefixer" : "*",
+  	"gulp-svg-sprites" : "*"
+  }
+}
