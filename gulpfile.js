@@ -6,7 +6,9 @@ var gulp = require('gulp'),
 
 gulp.task('jade', function(){
 	gulp.src('./*.jade')
-		.pipe(jade())
+		.pipe(jade({
+			pretty: true
+		}))
 		.pipe(gulp.dest('./'))
 })
 

@@ -31,6 +31,8 @@ blockquote
 
 .line
 	margin-bottom 40px
+	@media screen and (max-width: 480px)
+		text-align center
 
 	img
 		vertical-align top
@@ -38,6 +40,13 @@ blockquote
 		border-radius 50%
 		width 120px
 		height 120px
+		margin-right 20px
+		@media screen and (max-width: 480px)
+			display inline-block
+			margin-bottom 10px
+
+	img.kate
+		vertical-align: middle;
 
 	img + p
 		vertical-align top
@@ -45,6 +54,14 @@ blockquote
 		width: calc(100% - 170px)
 		padding 0px
 		margin 0px
+		@media screen and (max-width: 480px)
+			text-align left
+			display block
+			margin 0px auto
+			width 100%
+
+	img.kate + p
+		vertical-align middle
 
 .agenda__day
 	margin-top 40px
@@ -54,7 +71,7 @@ blockquote
 	height 100%
 
 	&__container
-		background url('../images/dutch-design-week-2015-07.jpg')
+		background url('../images/dutch-design-week-2015-07_small.jpg')
 		background-size cover
 		max-width 1920px
 		width 100%
@@ -108,4 +125,10 @@ blockquote
 		display inline-block
 		padding 20px
 		vertical-align top
-
+		@media screen and (max-width: 600px)
+			width 100%
+			display block
+			margin-top 0px
+			margin-bottom 0px
+			padding-bottom 0px
+			padding-top 0px
