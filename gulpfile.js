@@ -14,7 +14,9 @@ gulp.task('jade', function(){
 
 gulp.task('svgsprite', function(){
 	return gulp.src('./assets/images/svg/*.svg')
-		.pipe(svgsprite())
+		.pipe(svgsprite({
+			mode: 'symbols'
+		}))
 		.pipe(gulp.dest('./assets/images/svg/sprite/'));
 })
 

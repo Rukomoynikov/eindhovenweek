@@ -128,7 +128,7 @@ blockquote
 			color white
 
 	&__col
-		width 33%
+		width 32%
 		display inline-block
 		padding 20px
 		vertical-align top
@@ -150,6 +150,9 @@ blockquote
 			@media screen and (max-width: 1023px)
 				width 100%
 
+		&--fullwidth
+			width 100%
+
 	&--fullwidth
 		max-width 1920px
 		width 100%
@@ -157,8 +160,18 @@ blockquote
 
 
 // Event markup
+.event__toggle
+	cursor pointer
+
+.event__toggle.unactive
+	// text-decoration underline
+	color #c7c7c7
+
 .event__image > img
 	width 100%
+
+.event__image--width-auto > img
+	width initial
 
 .event__title
 	position absolute
@@ -173,6 +186,13 @@ blockquote
 .event__date, .event__price
 	margin-bottom 10px
 	text-align left
+
+	> svg
+		height: 1em;
+		display: inline;
+		width: 1em;
+		vertical-align: middle;
+		margin-right: 10px;
 
 .event__description
 	font-style italic
@@ -197,16 +217,19 @@ blockquote
 	background url('../images/map-image.png') #222
 	background-size cover
 	background-position center center
-	height 600px
+	// height 600px
 	text-align center
 	position relative
-
+	padding 20px
+	@media screen and (max-width: 1023px)
+		width 100%
+		padding 0px
 
 form
-	position absolute
-	top 50%
-	left 50%
-	transform translateY(-50%) translateX(-50%)
+	position relative
+	// top 50%
+	// left 50%
+	// transform translateY(-50%) translateX(-50%)
 	width 1024px
 	display inline-block
 	text-align left
@@ -215,6 +238,7 @@ form
 	padding 10px
 	@media screen and (max-width: 1023px)
 		width initial
+		max-width initial
 
 	.formgroup
 		margin-bottom 20px
@@ -226,5 +250,28 @@ form
 		input, textarea
 			display block
 			width 100%
+			outline none
+
+			&:focus
+				border 2px solid yellow
+
+				&:valid
+					border 2px solid green
+
+		input[type="submit"]
+			width initial
+			background yellow
+			border 0px
+			color black
+			padding 5px 10px
+			outline none
 
 
+.fancyboxhidden, .events.events--unactive
+	display none
+
+.section__col--event-unactive
+	filter grayscale()
+
+	&:hover
+		filter initial
