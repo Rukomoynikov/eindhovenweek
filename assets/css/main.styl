@@ -10,6 +10,9 @@ html, body
 .bold, .choosed
 	font-family "ralewaybold"
 
+.modal
+	displa none
+
 a
 	color #383838
 
@@ -72,6 +75,7 @@ blockquote
 
 	&__container
 		background url('../images/dutch-design-week-2015-07_small.jpg')
+		background-position center center
 		background-size cover
 		max-width 1920px
 		width 100%
@@ -120,11 +124,15 @@ blockquote
 		font-family: "ralewaymedium";
 		letter-spacing: 1px;
 
+		&--map
+			color white
+
 	&__col
 		width 33%
 		display inline-block
 		padding 20px
 		vertical-align top
+		position relative
 		@media screen and (max-width: 600px)
 			width 100%
 			display block
@@ -132,3 +140,91 @@ blockquote
 			margin-bottom 0px
 			padding-bottom 0px
 			padding-top 0px
+
+		&--event
+			text-align center
+			@media screen and (max-width: 600px)
+				margin-bottom 40px
+
+		&--form
+			@media screen and (max-width: 1023px)
+				width 100%
+
+	&--fullwidth
+		max-width 1920px
+		width 100%
+		background-size cover
+
+
+// Event markup
+.event__image > img
+	width 100%
+
+.event__title
+	position absolute
+	color black
+	background yellow
+	// display inline-block
+	padding 5px
+	top 145px
+	margin 0px 30px 0px 10px
+	text-align left
+
+.event__date, .event__price
+	margin-bottom 10px
+	text-align left
+
+.event__description
+	font-style italic
+	text-align left
+
+.event__givememore
+	display inline-block
+	margin 0px auto
+	background yellow
+	border 1px dashed #383838
+	color black
+	padding 5px 10px
+	text-decoration none
+	margin-top 10px
+	text-transform uppercase
+
+	&:hover
+		border 1px solid black
+		transition border .3s
+
+#map
+	background url('../images/map-image.png') #222
+	background-size cover
+	background-position center center
+	height 600px
+	text-align center
+	position relative
+
+
+form
+	position absolute
+	top 50%
+	left 50%
+	transform translateY(-50%) translateX(-50%)
+	width 1024px
+	display inline-block
+	text-align left
+	color white
+	background rgba(alpha(#383838,0.5))
+	padding 10px
+	@media screen and (max-width: 1023px)
+		width initial
+
+	.formgroup
+		margin-bottom 20px
+
+		label
+			display block
+			margin-bottom 10px
+
+		input, textarea
+			display block
+			width 100%
+
+
