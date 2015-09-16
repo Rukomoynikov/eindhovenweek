@@ -74,7 +74,7 @@ blockquote
 	height 100%
 
 	&__container
-		background url('../images/dutch-design-week-2015-07_small.jpg')
+		background url('../images/thinkascreator.jpg')
 		background-position center center
 		background-size cover
 		max-width 1920px
@@ -114,10 +114,23 @@ blockquote
 			display inline-block
 			padding 5px
 
+	&__icon
+		position absolute
+		bottom 20px
+		left 50%
+		transform translateX(-50%)
+		width 2em
+		height 2em
+		fill white
+
 .section
 	max-width 1024px
 	margin 0px auto
 	padding 0px 10px
+
+	&--colored
+		background-color #F1EEEE;
+		padding-top 20px
 
 
 	&__title
@@ -142,7 +155,8 @@ blockquote
 			padding-top 0px
 
 		&--event
-			text-align center
+			margin-bottom 40px
+			// text-align center
 			@media screen and (max-width: 600px)
 				margin-bottom 40px
 
@@ -152,6 +166,12 @@ blockquote
 
 		&--fullwidth
 			width 100%
+			margin -20px
+
+		&--50
+			width 49%
+			@media screen and (max-width: 600px)
+				width 100%
 
 	&--fullwidth
 		max-width 1920px
@@ -167,8 +187,15 @@ blockquote
 	// text-decoration underline
 	color #c7c7c7
 
-.event__image > img
-	width 100%
+.event__image
+	display inline-block
+	width 280px
+	vertical-align top
+	@media screen and (max-width: 767px)
+		display block
+
+	> img
+		width 100%
 
 .event__image--width-auto > img
 	width initial
@@ -176,16 +203,19 @@ blockquote
 .event__title
 	position absolute
 	color black
-	background yellow
+	background rgba(255,255,0,0.8)
 	// display inline-block
 	padding 5px
 	top 145px
 	margin 0px 30px 0px 10px
 	text-align left
+	width 260px
 
 .event__date, .event__price
 	margin-bottom 10px
 	text-align left
+	display inline-block
+	margin-left 20px
 
 	> svg
 		height: 1em;
@@ -197,6 +227,12 @@ blockquote
 .event__description
 	font-style italic
 	text-align left
+	display inline-block
+	width calc(100% - 300px)
+	vertical-align top
+	margin-left 15px
+	@media screen and (max-width: 767px)
+		width 100%
 
 .event__givememore
 	display inline-block
@@ -208,6 +244,7 @@ blockquote
 	text-decoration none
 	margin-top 10px
 	text-transform uppercase
+	margin-left 20px
 
 	&:hover
 		border 1px solid black
@@ -271,6 +308,76 @@ form
 	display none
 
 .section__col--event-unactive
+	filter grayscale()
+
+	&:hover
+		filter initial
+
+.listtitle
+	list-style-type: none
+	padding: 10px 10px 10px 20px
+	margin-bottom: 20px
+	margin-left: -20px
+
+// Сеция с контактной формой
+#map
+	background url('../images/map-image.png') #222
+	background-size cover
+	background-position center center
+	// height 600px
+	text-align center
+	position relative
+	padding 20px
+	@media screen and (max-width: 1023px)
+		width 100%
+		padding 0px
+
+form
+	position relative
+	// top 50%
+	// left 50%
+	// transform translateY(-50%) translateX(-50%)
+	width 1024px
+	display inline-block
+	text-align left
+	color white
+	background rgba(alpha(#383838,0.5))
+	padding 10px
+	@media screen and (max-width: 1023px)
+		width initial
+		max-width initial
+
+	.formgroup
+		margin-bottom 20px
+
+		label
+			display block
+			margin-bottom 10px
+
+		input, textarea
+			display block
+			width 100%
+			outline none
+
+			&:focus
+				border 2px solid yellow
+
+				&:valid
+					border 2px solid green
+
+		input[type="submit"]
+			width initial
+			background yellow
+			border 0px
+			color black
+			padding 5px 10px
+			outline none
+
+
+.fancyboxhidden, .events.events--unactive
+	display none
+
+.events.events--unactive .section__col
 	filter grayscale()
 
 	&:hover

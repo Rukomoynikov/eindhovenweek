@@ -87,7 +87,7 @@ blockquote {
   height: 100%;
 }
 .header__container {
-  background: url("../images/dutch-design-week-2015-07_small.jpg");
+  background: url("../images/thinkascreator.jpg");
   background-position: center center;
   background-size: cover;
   max-width: 1920px;
@@ -136,10 +136,24 @@ blockquote {
     font-size: 3vw;
   }
 }
+.header__icon {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 2em;
+  height: 2em;
+  fill: #fff;
+}
 .section {
   max-width: 1024px;
   margin: 0px auto;
   padding: 0px 10px;
+}
+.section--colored {
+  background-color: #f1eeee;
+  padding-top: 20px;
 }
 .section__title {
   font-family: "ralewaymedium";
@@ -166,7 +180,7 @@ blockquote {
   }
 }
 .section__col--event {
-  text-align: center;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 600px) {
   .section__col--event {
@@ -180,6 +194,15 @@ blockquote {
 }
 .section__col--fullwidth {
   width: 100%;
+  margin: -20px;
+}
+.section__col--50 {
+  width: 49%;
+}
+@media screen and (max-width: 600px) {
+  .section__col--50 {
+    width: 100%;
+  }
 }
 .section--fullwidth {
   max-width: 1920px;
@@ -192,6 +215,16 @@ blockquote {
 .event__toggle.unactive {
   color: #c7c7c7;
 }
+.event__image {
+  display: inline-block;
+  width: 280px;
+  vertical-align: top;
+}
+@media screen and (max-width: 767px) {
+  .event__image {
+    display: block;
+  }
+}
 .event__image > img {
   width: 100%;
 }
@@ -201,16 +234,19 @@ blockquote {
 .event__title {
   position: absolute;
   color: #000;
-  background: #ff0;
+  background: rgba(255,255,0,0.8);
   padding: 5px;
   top: 145px;
   margin: 0px 30px 0px 10px;
   text-align: left;
+  width: 260px;
 }
 .event__date,
 .event__price {
   margin-bottom: 10px;
   text-align: left;
+  display: inline-block;
+  margin-left: 20px;
 }
 .event__date > svg,
 .event__price > svg {
@@ -223,6 +259,15 @@ blockquote {
 .event__description {
   font-style: italic;
   text-align: left;
+  display: inline-block;
+  width: calc(100% - 300px);
+  vertical-align: top;
+  margin-left: 15px;
+}
+@media screen and (max-width: 767px) {
+  .event__description {
+    width: 100%;
+  }
 }
 .event__givememore {
   display: inline-block;
@@ -234,6 +279,7 @@ blockquote {
   text-decoration: none;
   margin-top: 10px;
   text-transform: uppercase;
+  margin-left: 20px;
 }
 .event__givememore:hover {
   border: 1px solid #000;
@@ -306,6 +352,82 @@ form .formgroup input[type="submit"] {
           filter: grayscale();
 }
 .section__col--event-unactive:hover {
+  -webkit-filter: initial;
+          filter: initial;
+}
+.listtitle {
+  list-style-type: none;
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+#map {
+  background: url("../images/map-image.png") #222;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+@media screen and (max-width: 1023px) {
+  #map {
+    width: 100%;
+    padding: 0px;
+  }
+}
+form {
+  position: relative;
+  width: 1024px;
+  display: inline-block;
+  text-align: left;
+  color: #fff;
+  background: rgba(56,56,56,0.5);
+  padding: 10px;
+}
+@media screen and (max-width: 1023px) {
+  form {
+    width: initial;
+    max-width: initial;
+  }
+}
+form .formgroup {
+  margin-bottom: 20px;
+}
+form .formgroup label {
+  display: block;
+  margin-bottom: 10px;
+}
+form .formgroup input,
+form .formgroup textarea {
+  display: block;
+  width: 100%;
+  outline: none;
+}
+form .formgroup input:focus,
+form .formgroup textarea:focus {
+  border: 2px solid #ff0;
+}
+form .formgroup input:focus:valid,
+form .formgroup textarea:focus:valid {
+  border: 2px solid #008000;
+}
+form .formgroup input[type="submit"] {
+  width: initial;
+  background: #ff0;
+  border: 0px;
+  color: #000;
+  padding: 5px 10px;
+  outline: none;
+}
+.fancyboxhidden,
+.events.events--unactive {
+  display: none;
+}
+.events.events--unactive .section__col {
+  -webkit-filter: grayscale();
+          filter: grayscale();
+}
+.events.events--unactive .section__col:hover {
   -webkit-filter: initial;
           filter: initial;
 }

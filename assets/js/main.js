@@ -1,8 +1,18 @@
 $(document).ready(function(){
 	$('.fancybox').fancybox({
 		"width" : "750",
-		"autoDimensions" : false
+		"autoSize" : false,
+		 helpers: {
+		    overlay: {
+		      locked: false
+		    }
+		  }
 	})
+// $('.fancybox').click(function(event){
+// 	event.preventDefault();
+// 	console.log(this);
+// 	$.fancybox([$(this)]);
+// })
 
 	// Переключение табов для событий
 	var event__toggles = document.querySelectorAll('h2 .event__toggle');
