@@ -11,7 +11,11 @@ html, body
 	font-family "ralewaybold"
 
 .modal
-	displa none
+	display none
+
+.doublesized
+	font-size 2em
+	font-family "ralewaythin"
 
 a
 	color #383838
@@ -224,6 +228,9 @@ blockquote
 		vertical-align: middle;
 		margin-right: 10px;
 
+.event__date
+	margin-left 0px
+
 .event__description
 	font-style italic
 	text-align left
@@ -249,6 +256,9 @@ blockquote
 	&:hover
 		border 1px solid black
 		transition border .3s
+
+	&:first-of-type
+		margin-left 0px
 
 #map
 	background url('../images/map-image.png') #222
@@ -376,6 +386,9 @@ form
 
 .fancyboxhidden, .events.events--unactive
 	display none
+
+.fancybox-skin
+	padding 0px
 
 .events.events--unactive .section__col
 	filter grayscale()

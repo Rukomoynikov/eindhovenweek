@@ -15,7 +15,11 @@ body {
   font-family: "ralewaybold";
 }
 .modal {
-  displa: none;
+  display: none;
+}
+.doublesized {
+  font-size: 2em;
+  font-family: "ralewaythin";
 }
 a {
   color: #383838;
@@ -256,6 +260,9 @@ blockquote {
   vertical-align: middle;
   margin-right: 10px;
 }
+.event__date {
+  margin-left: 0px;
+}
 .event__description {
   font-style: italic;
   text-align: left;
@@ -284,6 +291,9 @@ blockquote {
 .event__givememore:hover {
   border: 1px solid #000;
   transition: border 0.3s;
+}
+.event__givememore:first-of-type {
+  margin-left: 0px;
 }
 #map {
   background: url("../images/map-image.png") #222;
@@ -422,6 +432,9 @@ form .formgroup input[type="submit"] {
 .fancyboxhidden,
 .events.events--unactive {
   display: none;
+}
+.fancybox-skin {
+  padding: 0px;
 }
 .events.events--unactive .section__col {
   -webkit-filter: grayscale();
