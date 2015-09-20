@@ -154,6 +154,7 @@ blockquote {
   max-width: 1024px;
   margin: 0px auto;
   padding: 0px 10px;
+  position: relative;
 }
 .section--colored {
   background-color: #f1eeee;
@@ -165,6 +166,9 @@ blockquote {
 }
 .section__title--map {
   color: #fff;
+}
+.section__title--popup {
+  margin-left: 15px;
 }
 .section__col {
   width: 32%;
@@ -198,7 +202,7 @@ blockquote {
 }
 .section__col--fullwidth {
   width: 100%;
-  margin: -20px;
+  margin: 0px -20px 40px -20px;
 }
 .section__col--50 {
   width: 49%;
@@ -263,6 +267,9 @@ blockquote {
 .event__date {
   margin-left: 0px;
 }
+.event__date--popup {
+  margin-left: 15px;
+}
 .event__description {
   font-style: italic;
   text-align: left;
@@ -275,6 +282,11 @@ blockquote {
   .event__description {
     width: 100%;
   }
+}
+.event__description--popup {
+  display: block;
+  width: 100%;
+  margin-left: 15px;
 }
 .event__givememore {
   display: inline-block;
@@ -429,12 +441,24 @@ form .formgroup input[type="submit"] {
   padding: 5px 10px;
   outline: none;
 }
+.dialogi__itunes {
+  position: absolute;
+  right: 0px;
+  top: -10px;
+  width: 120px;
+}
+.dialogi__itunes img {
+  width: 100%;
+}
+.dialog__overlay {
+  background: rgba(0,0,0,0.7);
+}
 .fancyboxhidden,
 .events.events--unactive {
   display: none;
 }
-.fancybox-skin {
-  padding: 0px;
+.fancybox-opened .fancybox-skin {
+  padding: 0px !important;
 }
 .events.events--unactive .section__col {
   -webkit-filter: grayscale();

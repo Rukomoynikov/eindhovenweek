@@ -93,8 +93,8 @@ html
 				.section__col.section__col--fullwidth.section__col--event
 					.event__image
 						img(src='http://education.lumiknows.com/assets/images/BPS_small.jpg')
-						.event__title Как за 3 дня узнать о будущем больше, чем за год
 					.event__description
+						h3.section__title Как за 3 дня узнать о будущем больше, чем за год
 						.event__date
 							svg.icon.calendar
 								use(xlink:href="#calendar")
@@ -188,9 +188,18 @@ html
 		section.section.section--fullwidth.section--colored
 			section.section
 				h2.section__title Диалоги
+				a(href='#').dialogi__itunes
+					img(src='./assets/images/podcast-icon.png')
+				p Мы проводим интервью с лидерами.
 				.section__col.section__col--50
-					img.dialog__img(src='./assets/images/ekaterina_150.jpg')
-					h3.dialog__title Диалог
+					a(href="#")
+						img.dialog__img(src='./assets/images/dialog.jpg')
+						.dialog__overlay
+						h3.dialog__title Дизайн-исследования в создании нового продукта: от издержек к инвестициям
+				.section__col.section__col--50
+					a(href="#")
+						img.dialog__img(src='./assets/images/dialog.jpg')
+						h3.dialog__title Дизайн-исследования в создании нового продукта: от издержек к инвестициям
 		section.section
 			h2.section__title Команда:
 			.section__col.section__col--50.line
@@ -214,7 +223,7 @@ html
 					| Со-основатель и директор по продукту компании TFunnel.
 		section.section.section--fullwidth#map
 			form
-				.section__col.section__col--form.section__col--fullwidth
+				.section__col.section__col--form.section__col--fullwidth(style='margin: 0px')
 					h2.section__title Форма регистрации
 				.section__col.section__col--form
 					.formgroup
@@ -228,7 +237,7 @@ html
 					.formgroup
 						label Ваш номер телефона
 						input(type='text', name='phone', required)
-				.section__col.section__col--form.section__col--fullwidth
+				.section__col.section__col--form.section__col--fullwidth(style='margin: 0px')
 					.formgroup
 						label  Сообщение
 						textarea()
@@ -238,11 +247,11 @@ html
 		#event1.fancyboxhidden
 			//- .event__image--width-auto
 			//- 	img(src='http://education.lumiknows.com/assets/images/thinkascreator_copy.jpg', width='700px')
-			iframe(width="560" height="315" src="https://www.youtube.com/embed/obNf0mx1Wbk" frameborder="0" allowfullscreen)
-			.event__title Как за 3 дня узнать о будущем больше, чем за год
-			.event__date 21.10.2015 - 25.10.2015
+			//iframe(width="560" height="315" src="https://www.youtube.com/embed/obNf0mx1Wbk" frameborder="0" allowfullscreen)
+			h2.section__title--popup Как за 3 дня узнать о будущем больше, чем за год
+			.event__date.event__date--popup 21.10.2015 - 25.10.2015
 			.event__price 500 EURO
-			.event__description Эта неделя – одно из самых важных событий в мире творческих индустрий. Сколько раз я убеждалась в том, что темы, явления, люди и технологии, которые появляются в это время в небольшом голландском городке, становятся потом мейнстримом, обретают силу глобальных трендов.
+			.event__description.event__description--popup Эта неделя – одно из самых важных событий в мире творческих индустрий. Сколько раз я убеждалась в том, что темы, явления, люди и технологии, которые появляются в это время в небольшом голландском городке, становятся потом мейнстримом, обретают силу глобальных трендов.
 		#teamKate.fancyboxhidden
 			.line
 				img.kate(src='./assets/images/ekaterina_150.jpg')
@@ -262,16 +271,12 @@ html
 			p С 2009 года Lumiknows выполнило более десятка проектов сканирования трендов для штаб-квартир Philips Design, Samsung Electronics в Эйндховене и Сеуле, a также их подразделений в Гонконге, Лондоне и Париже для самых разных продуктовых категорий: "здоровье", "бытовая техника", "мобильные коммуникации", "образ жизни", "премиальность".
 			p В качестве руководителя Lumiknows Екатерине работала с множеством зарубежных дизайн-агентств, включая ведущие дизайн-консалтинговые компании мира: Continuum, Gravity Tank, Toca Design, Idea Couture, выполняя российскую часть их проектов для глобальных клиентов.
 			p Уникальная компетенция Lumiknows – разработка методологии и стандартов создания, прототипирования и тестирования новых продуктов, услуг, сервисов с целью их последующей интеграции в бизнес-процессы компаний. В результате работы с Lumiknows были созданы Лаборатории дизайна и клиентского опыта ОАО «Билайн-Вымпелком», ОАО «Промсвязьбанк», ОАО «Сбербанка России», интегрированы новые подходы к созданию и тестированию новых продуктов в NVision Group, Intel Russia и множестве других компаний и стартапов.
-
 			p Екатерина на регулярной основе проводит тренинги и образовательные семинары для дизайн-команд, предпринимателей и топ-менеджмента по темам «креативное мышление в бизнесе», «применение инструментария дизайн-мышления в разработке новых продуктов», «стратегии развития и позиционирования» и др. Среди клиентов – ведущие технопарки и образовательные учреждения России: Digital October, Сколково, МГУ имени Ломоносова, Уральский Федеральный Университет, IT-Парк Татарстана, бизнес-инкубаторы С.-Петербурга, Ижевска, Тольятти, Казани и множества других.
-
 			p В 2012 стала первым российским спикером, приглашенным выступить на крупнейшей конференции Design Management Institute в Хельсинки, чтобы поделиться опытом проведенных в России дизайн-исследований с мировым дизайн-сообществом.
-
-			В 2013 была приглашена курировать курс «Дизайн-мышление для инноваций в бизнесе» от самого известного в мире проекта в сфере дистанционного образования Coursera. Проект Coursera Learning Hub состоялся на базе Digital October в Москве.
-
+			p В 2013 была приглашена курировать курс «Дизайн-мышление для инноваций в бизнесе» от самого известного в мире проекта в сфере дистанционного образования Coursera. Проект Coursera Learning Hub состоялся на базе Digital October в Москве.
 			p В 2014 стала российским ментором по дизайну глобального конкурса Intel Make It Wearable, призванном ускорить создание инновационных продуктов в области носимых технологий (wearables). Финал конкурса состоялся в Беркли, Кремниевая долина, США.
-
 			p Закончила МГУ им. Ломоносова, защитила кандидатскую диссертацию в Институте Антропологии и Этнографии Российской Академии Наук. В 2005 году выиграла стипендию Британского правительства в области «Создания и разработки нового продукта» (New Product Development), что позволило ей получить с отличием британскую степень Master of Arts, Design & Branding Strategy в лондонском Brunel University
 		script(src='./assets/js/jquery.min.js')
 		script(src='./assets/js/fancybox/jquery.fancybox.js')
+		script(type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js")
 		script(src='./assets/js/main.js')

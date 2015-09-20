@@ -41,4 +41,37 @@ $(document).ready(function(){
 		}
 	}
 
+	// Submit form
+
+	//var register_form = document.querySelector('form')
+    //
+	//register_form.addEventListener('submit', submit_register_form)
+    //
+	//function submit_register_form (event){
+	//	console.log("Hey")
+	//	event.preventDefault();
+	//	params.message.text = "Имя: " + document.querySelector('[name="name"]').value + "\n  Email: "
+	//		+ document.querySelector('[name="email"]').value + "\n Возраст: " + document.querySelector('[name="age"]').value
+	//		+ "\n Уровень: "  + document.querySelector('[name="level"]').value + "\n Дополнительный комментарий: "
+	//		+ document.querySelector('[name="comment"]').value;
+	//	sendEmail()
+	//}
+    //
+	//var m = new mandrill.Mandrill('tnrsgJ1AZB3qg4a1R_vN_Q');
+    //
+	//function sendEmail(){
+	//	m.messages.send(params, function(res) {
+	//		$('form').html("<p>Спасибо," + document.querySelector('[name="name"]').value +  ". Ваша заявка отправлена.</p>")
+	//	}, function(err) {
+	//	});
+	//}
+    //
+	//var params = {
+	//	"message": {
+	//		"from_email":"cat@mos-it.com",
+	//		"to":[{"email":"rukomoynikov@gmail.com"}],
+	//		"subject": "Заявка с английского сайта",
+	//	}
+	//};
+
 });
