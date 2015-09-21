@@ -295,7 +295,7 @@ blockquote {
 .event__description--popup {
   display: block;
   width: 100%;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 .event__givememore {
   display: inline-block;
@@ -323,6 +323,7 @@ blockquote {
   text-align: center;
   position: relative;
   padding: 20px;
+  display: none;
 }
 @media screen and (max-width: 1023px) {
   #map {
@@ -492,9 +493,6 @@ form .formgroup input[type="submit"] {
 .fancyboxhidden,
 .events.events--unactive {
   display: none;
-}
-.fancybox-opened .fancybox-skin {
-  padding: 0px !important;
 }
 .events.events--unactive .section__col {
   -webkit-filter: grayscale();

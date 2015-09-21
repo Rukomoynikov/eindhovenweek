@@ -54,7 +54,8 @@ $(document).ready(function(){
 			"Имя: " + document.querySelector('[name="name"]').value
 			+  "\n  Email: " + document.querySelector('[name="email"]').value
 			+ "\n Номер телефона: " + document.querySelector('[name="phone"]').value
-			+ "\n Сообщение: "  + document.querySelector('[name="message"]').value;
+			+ "\n Сообщение: "  + document.querySelector('[name="message"]').value
+			+ + "\n Сообщение: "  + document.querySelector('[name="message"]').value;
 		submit_button.disabled = true;
 		sendEmail()
 	}
@@ -75,5 +76,22 @@ $(document).ready(function(){
 			"subject": "Заявка с сайта",
 		}
 	};
+
+	// Выбор события в форму
+	var form_section = document.querySelector("#map");
+	var joinToEvents = document.querySelectorAll('.jointoevent');
+	var theme_input = document.querySelector('[name="theme"]');
+	var theme_text = document.querySelector('p.form__theme');
+
+	for (var i = 0; i < joinToEvents.length; i++){
+		joinToEvents[i].addEventListener('click', function (event) {
+			event.preventDefault();
+			$.fancybox.close();
+			form_section.style.display = 'block';
+			window.scrollTo(0, document.documentElement.scrollHeight)
+			theme_text.innerText = this.dataset.eventname;
+			theme_input.value = this.dataset.eventname;
+		})
+	}
 
 });
