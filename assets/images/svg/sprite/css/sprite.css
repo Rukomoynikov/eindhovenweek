@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 3.2em 11em;
+    background-size: 8em 17.4em;
 }
 
 .no-svg .icon:before {
@@ -27,15 +27,27 @@
     height: 3.2em;
 }
 
-.icon.price-tag:before {
+.icon.play2:before {
     background-position: 0em -6.4em;
     width: 3.2em;
     height: 3.2em;
 }
 
-.icon.rocket:before {
+.icon.price-tag:before {
     background-position: 0em -9.6em;
+    width: 3.2em;
+    height: 3.2em;
+}
+
+.icon.rocket:before {
+    background-position: 0em -12.8em;
     width: 1.3em;
     height: 1.4em;
+}
+
+.icon.youtube4:before {
+    background-position: 0em -14.2em;
+    width: 8em;
+    height: 3.2em;
 }
 

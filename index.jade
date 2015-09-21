@@ -94,7 +94,7 @@ html
 					.event__image
 						img(src='http://education.lumiknows.com/assets/images/BPS_small.jpg')
 					.event__description
-						h3.section__title Как за 3 дня узнать о будущем больше, чем за год
+						h3.section__title--event Как за 3 дня узнать о будущем больше, чем за год
 						.event__date
 							svg.icon.calendar
 								use(xlink:href="#calendar")
@@ -108,9 +108,9 @@ html
 						a(href='#event1').event__givememore.fancybox Хочу принять участие
 				.section__col.section__col--fullwidth.section__col--event
 					.event__image
-						img(src='http://education.lumiknows.com/assets/images/BPS_small.jpg')
-						.event__title Как за 3 дня узнать о будущем больше, чем за год
+						img(src='http://education.lumiknows.com/assets/images/thinkascreator_copy.jpg')
 					.event__description
+						h3.section__title--event Как за 3 дня узнать о будущем больше, чем за год
 						.event__date
 							svg.icon.calendar
 								use(xlink:href="#calendar")
@@ -125,24 +125,9 @@ html
 			.events.events--unactive
 				.section__col.section__col--fullwidth.section__col--event
 					.event__image
-						img(src='http://education.lumiknows.com/assets/images/2015-may.jpg')
-						.event__title Как за 3 дня узнать о будущем больше, чем за год
+						img(src='http://education.lumiknows.com/assets/images/thinkascreator_copy.jpg')
 					.event__description
-						.event__date
-							svg.icon.calendar
-								use(xlink:href="#calendar")
-							| 21 мая -7 июня
-						.event__price
-							svg.icon.calendar
-								use(xlink:href="#price-tag")
-							| Бесплатно
-						.event__text 21 мая -7 июня прошел первый 5-дневный интенсив "Думай как создатель. Дизайн-мышление на практике" с фокусом на цифровых продуктах. Программа состояла из трех этапов: "Гипотезы", "Модель", "Проверка". Участники познакомились с методами работы на каждом из этапов, провели дизайн-исследования в реальном контексте пользования разрабатываемых продуктов, создали "быстрый" прототип и получили обратную связь рынка. Результатом работы стали landing page и ролик, демонстрирующий ценность разработки. "Фоторепортаж здесь"
-						a(href='#event1').event__givememore.fancybox Подробнее
-				.section__col.section__col--fullwidth.section__col--event
-					.event__image
-						img(src='http://education.lumiknows.com/assets/images/BPS_small.jpg')
-						.event__title Как за 3 дня узнать о будущем больше, чем за год
-					.event__description
+						h3.section__title--event Как за 3 дня узнать о будущем больше, чем за год
 						.event__date
 							svg.icon.calendar
 								use(xlink:href="#calendar")
@@ -156,9 +141,9 @@ html
 						a(href='#event1').event__givememore.fancybox Хочу принять участие
 				.section__col.section__col--fullwidth.section__col--event
 					.event__image
-						img(src='http://education.lumiknows.com/assets/images/BPS_small.jpg')
-						.event__title Как за 3 дня узнать о будущем больше, чем за год
+						img(src='http://education.lumiknows.com/assets/images/thinkascreator_copy.jpg')
 					.event__description
+						h3.section__title--event Как за 3 дня узнать о будущем больше, чем за год
 						.event__date
 							svg.icon.calendar
 								use(xlink:href="#calendar")
@@ -190,15 +175,22 @@ html
 				h2.section__title Диалоги
 				a(href='#').dialogi__itunes
 					img(src='./assets/images/podcast-icon.png')
-				p Мы проводим интервью с лидерами.
+				p Мы проводим интервью с лидерами мнений. Вы модет
 				.section__col.section__col--50
-					a(href="#")
-						img.dialog__img(src='./assets/images/dialog.jpg')
-						.dialog__overlay
+					a(href="http://www.youtube.com/watch?v=3BQn18U7-ZA", target="_blank")
+						.dialog__img
+							img(src='./assets/images/dialog.jpg')
+							.dialog__overlay
+								svg.icon.youtube4.header__icon
+									use(xlink:href="#youtube4", fill='white')
 						h3.dialog__title Дизайн-исследования в создании нового продукта: от издержек к инвестициям
 				.section__col.section__col--50
-					a(href="#")
-						img.dialog__img(src='./assets/images/dialog.jpg')
+					a(href="http://www.youtube.com/watch?v=3BQn18U7-ZA", target="_blank")
+						.dialog__img
+							img(src='./assets/images/dialog.jpg')
+							.dialog__overlay
+								svg.icon.play2.header__icon
+									use(xlink:href="#play2", fill='white')
 						h3.dialog__title Дизайн-исследования в создании нового продукта: от издержек к инвестициям
 		section.section
 			h2.section__title Команда:
@@ -225,6 +217,7 @@ html
 			form
 				.section__col.section__col--form.section__col--fullwidth(style='margin: 0px')
 					h2.section__title Форма регистрации
+					p Для регистрации на событие, нажмите рядом с описанием "ХОЧУ ПРИНЯТЬ УЧАСТИЕ"
 				.section__col.section__col--form
 					.formgroup
 						label Ваше имя
@@ -240,7 +233,7 @@ html
 				.section__col.section__col--form.section__col--fullwidth(style='margin: 0px')
 					.formgroup
 						label  Сообщение
-						textarea()
+						textarea(name='message')
 				.section__col.section__col--form
 					.formgroup
 						input(type='submit', value='Отправить')
