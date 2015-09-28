@@ -15,8 +15,24 @@ html
 		meta(property="og:title", content="Образовательный тур от Екатерины Храмковой, Lumiknows")
 		meta(property="og:description", content="Приглашаю Вас прикоснуться к будущему. В октябре 2015 я еду на Неделю Голландского Дизайна (Dutch Design Week) в Эйндховен и буду рада, если и Вы присоединитесь ко мне в этой поездке 21 - 25 октября.")
 		meta(property="og:image", content="./assets/images/dutch-design-week-2015-07_small.jpg")
+		// OWL CAROUSEL
+		link(href="./assets/js/owlcarousel/assets/owl.carousel.css", rel='stylesheet', type='text/css')
 	body
 		include ./assets/images/svg/sprite/svg/symbols.svg
+		.menu
+			.menu__container
+				.menu__button
+					svg.icon.calendar.menu__icon
+						use(xlink:href="#mouse", fill='black')
+				.menu__logo
+					img(src='http://lumiknows.com/img/head_rus.jpg')
+				.menu__navigation
+					a(href='#section-description').menu__link О наc
+					a(href='#section-audience').menu__link Для кого
+					a(href='#section-topics').menu__link Темы
+					a(href='#section-afisha').menu__link Расписание встреч
+					a(href='#section-interviews').menu__link Диалоги
+					a(href='#section-team').menu__link Команда
 		header.header
 			// Случайная картинка
 			//- <iframe width="560" height="315" src="https://www.youtube.com/embed/obNf0mx1Wbk" frameborder="0" allowfullscreen></iframe>
@@ -26,8 +42,8 @@ html
 				.header__slogan--author Дизайн-мышление | Дизайн-исследования | Трендвотчинг | Развитие креативности
 				svg.icon.calendar.header__icon
 					use(xlink:href="#mouse", fill='white')
-		.section.description
-			p.doublesized Вы находитесь на образовательном портале дизайн-агентства инноваций Lumiknows. Мы помогаем бизнесу проектировать и улучшать пользовательский опыт продукта, услуги, бренда, используя инструментарий <a href='http://www.lumiknows.ru/content/design_research_rus/' target='_blank'>дизайн-исследований</a> и методологию <a href='http://www.lumiknows.com/content/131/' target='_blank'>дизайн-мышления</a>.
+		.section.description#section-description(style="padding-bottom: 0px;")
+			p.doublesized(style="padding-top: 83px; margin-top: -83px;") Вы находитесь на образовательном портале дизайн-агентства инноваций Lumiknows. Мы помогаем бизнесу проектировать и улучшать пользовательский опыт продукта, услуги, бренда, используя инструментарий <a href='http://www.lumiknows.ru/content/design_research_rus/' target='_blank'>дизайн-исследований</a> и методологию <a href='http://www.lumiknows.com/content/131/' target='_blank'>дизайн-мышления</a>.
 
 			p Накопленный опыт практической работы по созданию новых продуктов в более чем пятнадцати индустриях как для российских, так и мировых лидеров позволил нам разработать уникальную для России образовательную программу «Думай как создатель». Это первая российская программа, объединившая инструментарий дизайн-мышления, трендвотчинга и прототипирования.
 
@@ -36,8 +52,8 @@ html
 			p Сессии рассчитаны как на организации, так и на высокомотивированных профессионалов, нацеленных на раскрытие принципиально новых возможностей развития своей индустрии в условиях экономики, ключевой характеристикой которой является нелинейность, всеобщая взаимосвязанность и принципиальная непредсказуемость.
 
 			p Чаще всего, по окончании наших сессий участники говорят о "расширении сознания"...
-		section.section
-			h2.section__title Для кого:
+		section.section#section-audience(style="padding-top: 0px;")
+			h2.section__title(style="padding-top: 83px; margin-top: -83px;") Для кого:
 			ul
 				li Владельцы и топ-менеджмент, отвечающий за стратегическое развитие компаний;
 				li Специалисты по развитию бизнеса;
@@ -55,9 +71,9 @@ html
 				li Профессионалы, нацеленные на интеграцию технологий будущего в свои образовательные программы;
 				li Зрелые студенты, которые стоят на пороге выбора направлений дальнейшего обучения;
 				li Стартапы,задумывающиеся об эволюции своего продукта и/или позиционировании на глобальном рынке.
-		section.section.section--fullwidth.section--colored
+		section.section.section--fullwidth.section--colored#section-topics
 			section.section
-				h2.section__title Наиболее популярные темы:
+				h2.section__title(style="padding-top: 83px; margin-top: -83px;") Наиболее популярные темы:
 				ul.section__col.section__col--50
 					li.yellow-back.listtitle Дизайн-мышление
 					li Разработка инновационных продуктов с использованием методологии дизайн-мышления
@@ -84,8 +100,8 @@ html
 					li Что мешает нашему воображению: преодоление "тоннельного мышления"
 					li Развитие "творческого интеллекта" в организациях
 					li А что, если... Как активировать конвергентное мышление
-		section.section
-			h2.section__title
+		section.section#section-afisha
+			h2.section__title(style="padding-top: 83px; margin-top: -83px;")
 				span.event__toggle.active(data-events='active') Предстоящие события
 				|  /
 				span.event__toggle.unactive(data-events='unactive')  Архив событий
@@ -168,12 +184,12 @@ html
 							| 500 EURO
 						.event__text 27-28 октября 2015 состоится "XII Customer Experience Forum". Это одно из главных событий года в сфере управления отношениями с клиентами, которое собирает ключевых персон, топ-менеджеров и специалистов, работающих в сфере клиентского сервиса. В рамках форума Екатерина Храмкова, Lumiknows проведет мастер-класс "Базовая формула дизайн-мышления. Искусство поиска the Best Problem to Solve". Мероприятие пройдет в Radisson Blu, Москва.
 						a(href='#event1').event__givememore.fancybox Подробнее
-		section.section.section--fullwidth.section--colored
+		section.section.section--fullwidth.section--colored#section-interviews
 			section.section
-				h2.section__title Диалоги
+				h2.section__title(style="padding-top: 83px; margin-top: -83px;") Диалоги
 				a(href='#').dialogi__itunes
 					img(src='./assets/images/podcast-icon.png')
-				p Мы проводим интервью с лидерами мнений. Вы модет
+				p Мы проводим интервью с лидерами мнений. И другие приключения Незнайки на Луне.
 				.section__col.section__col--50
 					a(href="http://www.youtube.com/watch?v=3BQn18U7-ZA", target="_blank")
 						.dialog__img
@@ -190,8 +206,8 @@ html
 								svg.icon.play2.header__icon
 									use(xlink:href="#play2", fill='white')
 						h3.dialog__title Дизайн-исследования в создании нового продукта: от издержек к инвестициям
-		section.section
-			h2.section__title Команда:
+		section.section#section-team
+			h2.section__title(style="padding-top: 83px; margin-top: -83px;") Команда:
 			.section__col.section__col--50.line
 				img.kate(src='./assets/images/ekaterina_150.jpg')
 				p
@@ -240,9 +256,20 @@ html
 			//- .event__image--width-auto
 			//- 	img(src='http://education.lumiknows.com/assets/images/thinkascreator_copy.jpg', width='700px')
 			//iframe(width="560" height="315" src="https://www.youtube.com/embed/obNf0mx1Wbk" frameborder="0" allowfullscreen)
+			.owl-carousel
+				div.owl-carousel__slide
+					img(src='./assets/images/slide1.jpg')
+				div.owl-carousel__slide
+					img(src='./assets/images/slide1.jpg')
 			h2.section__title Как за 3 дня узнать о будущем больше, чем за год
-			.event__date 21.10.2015 - 25.10.2015
-			.event__price 500 EURO
+			.event__date
+				svg.icon.calendar
+					use(xlink:href="#calendar")
+				| 21.10.2015 - 25.10.2015
+			.event__price
+				svg.icon.price-tag
+					use(xlink:href="#price-tag")
+				| 500 EURO
 			.event__description.event__description--popup Эта неделя – одно из самых важных событий в мире творческих индустрий. Сколько раз я убеждалась в том, что темы, явления, люди и технологии, которые появляются в это время в небольшом голландском городке, становятся потом мейнстримом, обретают силу глобальных трендов.
 			a(href='#', data-eventName='Как за 4 дня узнать о будущем больше, чем за год').event__givememore.jointoevent Хочу принять участие
 		#teamKate.fancyboxhidden
@@ -271,5 +298,6 @@ html
 			p Закончила МГУ им. Ломоносова, защитила кандидатскую диссертацию в Институте Антропологии и Этнографии Российской Академии Наук. В 2005 году выиграла стипендию Британского правительства в области «Создания и разработки нового продукта» (New Product Development), что позволило ей получить с отличием британскую степень Master of Arts, Design & Branding Strategy в лондонском Brunel University
 		script(src='./assets/js/jquery.min.js')
 		script(src='./assets/js/fancybox/jquery.fancybox.js')
+		script(src='./assets/js/owlcarousel/owl.carousel.min.js')
 		script(type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js")
 		script(src='./assets/js/main.js')

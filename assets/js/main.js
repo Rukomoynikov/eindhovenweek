@@ -94,4 +94,41 @@ $(document).ready(function(){
 		})
 	}
 
+	// Показать меню при прокрутке вниз
+	var navigationPanel = document.querySelector(".menu");
+
+	document.addEventListener('scroll', listener)
+
+	function listener (){
+		if (window.pageYOffset > (window.screen.availHeight - 63)) {
+			navigationPanel.classList.add("menu--visible")
+		} else {
+			navigationPanel.classList.remove("menu--visible")
+		}
+	}
+
+	// // Menu for small viewports
+	var menu_button = document.querySelector(".menu__button");
+	var menu = document.querySelector('.menu__navigation');
+	menu_button.addEventListener('click', openMenu);
+
+	function openMenu (event){
+		event.preventDefault();
+		if (menu.classList.length < 2) {
+			menu.classList.add('menu--visible');
+		} else {
+			menu.classList.remove('menu--visible')
+		}
+	}
+
+	// Слайдшоу
+	$('.owl-carousel').owlCarousel({
+		items: 1,
+	    loop:true,
+	    margin: 10,
+	    nav:false,
+	    autoWidth: true,
+	    autoHeight: true,
+	})
+
 });

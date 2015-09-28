@@ -43,6 +43,92 @@ blockquote {
   background: #ff0;
   font-size: 120%;
 }
+.menu {
+  display: none;
+  width: 100%;
+  background: #fff;
+  height: 73px;
+  box-shadow: 0 0 1px #000;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+}
+.menu__container {
+  max-width: 1024px;
+  margin: 0px auto;
+}
+.menu__navigation {
+  color: #fff;
+  float: right;
+  vertical-align: middle;
+  height: 73px;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .menu__navigation {
+    border-top: 1px solid #000;
+    float: none;
+    height: initial;
+    display: none;
+  }
+}
+.menu__logo {
+  float: left;
+  vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .menu__logo {
+    float: none;
+    text-align: center;
+    height: 73px;
+  }
+}
+.menu__button {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu__button {
+    display: block;
+  }
+}
+.menu__icon {
+  width: 20px;
+  height: 20px;
+}
+.menu__link {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  vertical-align: middle;
+  line-height: 73px;
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .menu__link {
+    display: block;
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px dashed #ff0;
+  }
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+.menu__link + .menu__link {
+  margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .menu__link + .menu__link {
+    margin-left: 0px;
+  }
+}
+.menu--visible {
+  display: block;
+}
 .line {
   margin-bottom: 40px;
 }
@@ -156,7 +242,7 @@ blockquote {
 .section {
   max-width: 1024px;
   margin: 0px auto;
-  padding: 0px 10px;
+  padding: 30px 10px;
   position: relative;
 }
 .section--colored {
@@ -239,6 +325,8 @@ blockquote {
 @media screen and (max-width: 767px) {
   .event__image {
     display: block;
+    margin: 0px auto 10px 15px;
+    width: 100%;
   }
 }
 .event__image > img {
@@ -296,6 +384,7 @@ blockquote {
   display: block;
   width: 100%;
   margin-left: 0px;
+  margin-bottom: 40px;
 }
 .event__givememore {
   display: inline-block;
@@ -308,6 +397,11 @@ blockquote {
   margin-top: 10px;
   text-transform: uppercase;
   margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .event__givememore {
+    font-size: 0.9rem;
+  }
 }
 .event__givememore:hover {
   border: 1px solid #000;
@@ -501,4 +595,12 @@ form .formgroup input[type="submit"] {
 .events.events--unactive .section__col:hover {
   -webkit-filter: initial;
           filter: initial;
+}
+.owl-carousel {
+  width: 750px;
+  height: 200px;
+}
+.owl-carousel .owl-item {
+  width: 750px;
+  height: 200px;
 }
