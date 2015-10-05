@@ -7,12 +7,13 @@ $(document).ready(function(){
 		      locked: false
 		    }
 		  }
-	})
-// $('.fancybox').click(function(event){
-// 	event.preventDefault();
-// 	console.log(this);
-// 	$.fancybox([$(this)]);
-// })
+	});
+
+	// $('.fancybox').click(function(event){
+	// 	event.preventDefault();
+	// 	console.log(this);
+	// 	$.fancybox([$(this)]);
+	// })
 
 	// Переключение табов для событий
 	var event__toggles = document.querySelectorAll('h2 .event__toggle');

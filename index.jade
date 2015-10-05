@@ -17,6 +17,10 @@ html
 		meta(property="og:image", content="./assets/images/dutch-design-week-2015-07_small.jpg")
 		// OWL CAROUSEL
 		link(href="./assets/js/owlcarousel/assets/owl.carousel.css", rel='stylesheet', type='text/css')
+		//- Надписи в хедере на самый верх
+		//- Случайная картинка в хедере
+		//- В событиях картинку кругом
+		script(type='text/javascript', src='./assets/js/randomimage.js')
 	body
 		include ./assets/images/svg/sprite/svg/symbols.svg
 		.menu
@@ -38,7 +42,9 @@ html
 			//- <iframe width="560" height="315" src="https://www.youtube.com/embed/obNf0mx1Wbk" frameborder="0" allowfullscreen></iframe>
 			.header__container
 				h1.header__slogan Думай как создатель
+				br
 				h2.header__slogan--sub Образовательные программы Lumiknows
+				br
 				.header__slogan--author Дизайн-мышление | Дизайн-исследования | Трендвотчинг | Развитие креативности
 				svg.icon.calendar.header__icon
 					use(xlink:href="#mouse", fill='white')

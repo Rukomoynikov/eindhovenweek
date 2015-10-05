@@ -180,7 +180,6 @@ blockquote {
   height: 100%;
 }
 .header__container {
-  background: url("../images/thinkascreator.jpg");
   background-position: center center;
   background-size: cover;
   max-width: 1920px;
@@ -189,44 +188,44 @@ blockquote {
   color: #fff;
   font-family: 'ralewaylight';
   margin: 0px auto;
-  padding: 10vw;
+  padding: 1vw 0px 0px 1vw;
 }
 .header__slogan {
-  font-size: 10vh;
+  font-size: 13vh;
   margin: 0px;
-  background: #ff0;
+  background: rgba(255,255,0,0.8);
   display: inline-block;
-  padding: 10px;
+  padding: 10px 2vw;
   color: #000;
 }
 @media screen and (orientation: portrait) {
   .header__slogan {
-    font-size: 10vw;
+    font-size: 13vw;
   }
 }
 .header__slogan--sub {
-  font-size: 5vh;
+  font-size: 7vh;
   color: #000;
-  background: #fff;
+  background: rgba(255,255,255,0.8);
   display: inline-block;
-  padding: 5px;
+  padding: 10px 2vw;
   margin-bottom: 0px;
 }
 @media screen and (orientation: portrait) {
   .header__slogan--sub {
-    font-size: 5vw;
+    font-size: 7vw;
   }
 }
 .header__slogan--author {
-  font-size: 3vh;
-  background: #fff;
+  font-size: 5vh;
+  background: rgba(255,255,255,0.8);
   color: #000;
   display: inline-block;
-  padding: 5px;
+  padding: 10px 2vw;
 }
 @media screen and (orientation: portrait) {
   .header__slogan--author {
-    font-size: 3vw;
+    font-size: 5vw;
   }
 }
 .header__icon {
@@ -318,9 +317,11 @@ blockquote {
 }
 .event__image {
   display: inline-block;
-  width: 280px;
+  width: 190px;
   height: 190px;
   vertical-align: top;
+  border-radius: 50%;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .event__image {
